@@ -1,0 +1,79 @@
+/*
+   screen.css
+   Mousetracker Main CSS Doc
+   
+   Created by Jason Howmans on 2010-09-11.
+*/
+
+body {
+	height: 2000px;
+}
+
+span#cursor {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	background: url('../UI/cursorimg.png') top left no-repeat;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+	span#cursor.click { background: url('../UI/cursorimg.png') bottom left no-repeat; }
+
+div#mouseTrackerUI {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #CCCCCC;
+  	background: url(images/linear_bg_2.png);
+  	background: -moz-linear-gradient(100% 100% 90deg, #999999, #CCCCCC);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CCCCCC), to(#999999));
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 998;
+	font: 13px Helvetica, Arial, sans-serif;
+}
+
+	div#mouseTrackerUI ul#mouseTrackerUIControlls {
+		list-style-type: none;
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+	
+		div#mouseTrackerUI ul#mouseTrackerUIControlls li {
+			list-style-type: none;
+			display: block;
+			float: left;
+			padding: 0;
+			margin: 0;
+		}
+			
+			div#mouseTrackerUI ul#mouseTrackerUIControlls li a {
+				padding: 7px;
+				display: inline-block;
+				text-decoration: none;
+				color: #111;
+				text-shadow: #ddd 0px 1px 0px;
+			}
+		
+			div#mouseTrackerUI ul#mouseTrackerUIControlls li a:focus {
+				outline: none;
+			}
+		
+			div#mouseTrackerUI ul#mouseTrackerUIControlls li a.UIrecording {
+				background: #FF3F3D;
+			}
+			
+			div#mouseTrackerUI ul#mouseTrackerUIControlls li a.UIplaying {
+				background: #3DC920;
+			}
+		
+			div#mouseTrackerUI ul#mouseTrackerUIControlls li.mouseTrackerHide {
+				float: right;
+				background: #bbb;
+			}
